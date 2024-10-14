@@ -1,0 +1,187 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+.container {
+    background-color:hsl(275, 100%, 97%);
+   width: auto;
+   height: 600px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+ .desktop {
+    width: 100%; /* Make the image match the container's width */
+    height: auto; /* Keep the image's aspect ratio */
+    padding: 0;
+    margin: 0;
+    display: block;
+
+  }
+
+.faq-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  margin-bottom: 400px;
+}
+
+.faq-container h1 {
+    display: flex;
+    justify-content:flex-start; /* Aligns content to the left and right */
+    align-items: center; /* Centers items vertically */
+    font-size: 35px; /* Adjust the font size as needed */
+    color:  hsl(292, 42%, 14%);
+}
+
+.faq-icon {
+    width: 30px; /* Adjust the size of the icon as needed */
+    height: auto; /* Keep the aspect ratio */
+    margin-right: 20px; /* Space between the icon and the text */
+}
+
+h1 {
+    color: #4b0082;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Remove default styling for details and summary */
+details {
+    padding: 0;
+    margin: 0;
+}
+
+summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    background: none;
+    padding: 10px 0;
+    list-style: none; /* Remove default arrow */
+    border: none;
+    outline: none;
+}
+
+/* Style the toggle icon */
+.toggle-icon {
+    margin-left: 10px;
+}
+
+/* Answer content style */
+.faq-answer {
+    padding: 10px 0;
+    font-size: 16px;
+    display: none;
+    color:  hsl(292, 16%, 49%);
+}
+
+.faq-question:hover{
+    color: #4b0082;
+}
+
+/* Display answer when details is opened */
+details[open] .faq-answer {
+    display: block;
+}
+
+/* Change icon when details is opened */
+details[open] .toggle-icon img {
+    content: url('assets/images/icon-minus.svg'); /* Change to minus icon */
+}
+
+/* Optional: Add some spacing between each FAQ item */
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.mobile {
+    display: none; /* Hide mobile icon by default */
+}
+
+@media (max-width: 375px) {
+    .container {
+        height: auto; /* Allow the height to adjust automatically */
+        padding: 10px; /* Add some padding to the container */
+        width: 100%; /* Ensure the container takes up the full width */
+        max-width: 375px; /* Limit the width to 375px */
+        box-sizing: border-box; /* Include padding in width calculations */
+        display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+    }
+
+    .faq-container {
+        width: 270px; /* Set the FAQ container width to exactly 375px */
+        padding: 20px; /* Add padding for better spacing */
+        margin-top: -100px; /* Adjust this value to overlap the background image */
+        background: white; /* Ensure background color is set for visibility */
+        border-radius: 12px; /* Optional: Add border radius for aesthetics */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+    }
+
+    .faq-container h1 {
+        font-size: 28px; /* Smaller font size for heading */
+        justify-content: flex-start; /* Center the heading on small screens */
+        background-size: 25px; /* Ensure the background image size is adjusted */
+        background-repeat: no-repeat; /* Prevent repeating */
+        display: flex;
+    }
+
+    .faq-icon {
+        width: 20px; /* Smaller icon size */
+        height: 20px; /* Adjust height to reduce size further */
+        margin-right: 10px; /* Reduce spacing between icon and text */
+    }
+
+    .faq-item {
+        margin-bottom: 10px; /* Maintain some margin below each FAQ item */
+        padding-bottom: 8px; /* Adjust padding for smaller screens */
+    }
+
+    summary {
+        font-size: 16px; /* Smaller font size for questions */
+        padding: 8px 0; /* Adjust padding */
+    }
+
+    .faq-answer {
+        font-size: 14px; /* Smaller font size for answers */
+        padding: 8px 0; /* Adjust padding for answers */
+    }
+
+    .desktop {
+        display: none; /* Hide desktop image */
+    }
+
+    .mobile {
+        display: block; /* Show mobile image */
+    }
+}
+
